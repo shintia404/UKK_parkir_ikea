@@ -215,7 +215,7 @@ $default_keluar    = date('Y-m-d\TH:i', $default_keluar_ts);
     <div class="main-content">
 
         <div class="breadcrumb">
-            <a href="../controller/c_transaksi.php?aksi=tampil">← Data Parkir</a>
+            <a href="../controller/c_transaksi.php?aksi=tampil">← Transaksi</a>
             &nbsp;/&nbsp; Proses Keluar Kendaraan
         </div>
 

@@ -36,8 +36,8 @@ $link_dashboard = ($role_sekarang === 'owner')
 
         <?php elseif ($role_sekarang === 'petugas'): ?>
 
-            <!-- Petugas: Data Parkir & Riwayat saja -->
-            <a href="../controller/c_transaksi.php?aksi=tampil" class="parkir-menu-link"><span>🎫</span>Data Parkir</a>
+            <!-- Petugas: Transaksi & Riwayat saja -->
+            <a href="../controller/c_transaksi.php?aksi=tampil" class="parkir-menu-link"><span>🎫</span>Transaksi</a>
             <a href="../controller/c_riwayat.php" class="parkir-menu-link"><span>📋</span>Riwayat</a>
 
         <?php else: ?>

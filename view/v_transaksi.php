@@ -20,7 +20,7 @@ $role = $_SESSION['role'] ?? '';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Parkir - Parkir IKEA</title>
+    <title>Transaksi - Parkir IKEA</title>
     <link rel="stylesheet" href="../assets/transaksi.css">
     <link rel="stylesheet" href="../assets/navbar.css">
 </head>
@@ -33,8 +33,8 @@ $role = $_SESSION['role'] ?? '';
     <!-- HEADER -->
     <div class="header">
         <div>
-            <h1>Data Parkir</h1>
-            <p>Daftar kendaraan yang sedang parkir. Kendaraan yang sudah keluar ada di menu Riwayat.</p>
+            <h1>Transaksi</h1>
+            <p>Catat kendaraan masuk dan proses kendaraan keluar. Kendaraan yang sudah keluar ada di menu Riwayat.</p>
         </div>
         <div style="display:flex; gap:10px; align-items:center;">
             <?php if ($role === 'petugas' || $role === 'admin'): ?>
