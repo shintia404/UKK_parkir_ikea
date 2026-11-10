@@ -259,6 +259,7 @@ function rupiah_singkat($angka) {
         </section>
 
 
+        <?php if (($_SESSION['role'] ?? '') !== 'admin'): ?>
         <!-- ══════════ RIWAYAT TERBARU ══════════ -->
         <section class="content-card">
             <div class="section-title">
@@ -317,6 +318,7 @@ function rupiah_singkat($angka) {
                 </table>
             </div>
         </section>
+        <?php endif; ?>
 
     </main>
 

@@ -231,7 +231,8 @@ if ($role === 'admin') {
         </section>
 
 
-        <!-- ══ RIWAYAT PARKIR TERBARU (semua role) ═════════ -->
+        <?php if ($role !== 'admin'): ?>
+        <!-- ══ RIWAYAT PARKIR TERBARU (petugas saja) ═════════ -->
         <section class="content-card">
             <div class="section-title">
                 <div>
@@ -282,6 +283,7 @@ if ($role === 'admin') {
                 </table>
             </div>
         </section>
+        <?php endif; ?>
 
         <?php if ($role === 'admin'): ?>
         <!-- ══ LOG AKTIVITAS (hanya admin) ═════════════════ -->

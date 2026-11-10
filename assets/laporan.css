@@ -276,6 +276,21 @@ tbody tr:hover {
 }
 
 
+/* ================= TOTAL PENDAPATAN (BARIS AKHIR) ================= */
+
+tfoot td {
+    background-color: #fce4ec;
+    color: #7a4058;
+    font-weight: bold;
+    border-bottom: none;
+}
+
+tfoot td.label-total {
+    text-align: right;
+    padding-right: 20px;
+}
+
+
 /* ================= PLAT ================= */
 
 .plat {
@@ -353,7 +368,17 @@ tbody tr:hover {
 
 /* ================= CETAK ================= */
 
+@page {
+    size: A4 landscape;
+    margin: 12mm;
+}
+
 @media print {
+
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
 
     body {
         background-color: white;
@@ -362,17 +387,78 @@ tbody tr:hover {
 
     .btn-kembali,
     .filter-card,
-    .btn-cetak,
-    .summary {
-        display: none;
+    .btn-cetak {
+        display: none !important;
     }
 
     .container {
         max-width: 100%;
     }
 
+    .header {
+        margin-bottom: 12px;
+    }
+
+    /* Ringkasan (termasuk Total Pendapatan) ikut tercetak */
+    .summary {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        margin-bottom: 14px;
+    }
+
+    .summary-card {
+        box-shadow: none;
+        border: 1px solid #f8bbd0;
+        padding: 8px 10px;
+        gap: 8px;
+        break-inside: avoid;
+    }
+
+    .summary-card .icon {
+        display: none;
+    }
+
+    .summary-card h3 {
+        font-size: 16px;
+    }
+
+    .summary-card p {
+        font-size: 11px;
+    }
+
     .card {
         box-shadow: none;
         border: none;
+        padding: 0;
+    }
+
+    /* Tabel harus muat di kertas agar kolom Durasi & Total tidak terpotong */
+    .table-wrapper {
+        overflow: visible !important;
+    }
+
+    table {
+        min-width: 0 !important;
+        width: 100%;
+    }
+
+    table th,
+    table td {
+        padding: 7px 5px;
+        font-size: 11px;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr {
+        break-inside: avoid;
+    }
+
+    .plat,
+    .harga {
+        padding: 2px 6px;
     }
 }

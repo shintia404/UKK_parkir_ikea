@@ -45,9 +45,6 @@ $link_dashboard = ($role_sekarang === 'owner')
             <!-- Admin: semua menu -->
             <a href="../controller/c_kendaraan.php?aksi=tampil" class="parkir-menu-link"><span>🚗</span>Kendaraan</a>
             <a href="../controller/c_area_parkir.php?aksi=tampil" class="parkir-menu-link"><span>🅿️</span>Area Parkir</a>
-            <a href="../controller/c_transaksi.php?aksi=tampil" class="parkir-menu-link"><span>🎫</span>Transaksi</a>
-            <a href="../controller/c_riwayat.php" class="parkir-menu-link"><span>📋</span>Riwayat</a>
-            <a href="../controller/c_laporan.php" class="parkir-menu-link"><span>📊</span>Laporan</a>
             <a href="../controller/c_tarif.php?aksi=tampil" class="parkir-menu-link"><span>💵</span>Tarif</a>
             <a href="../view/v_user.php" class="parkir-menu-link"><span>👤</span>User</a>
             <a href="../controller/c_log.php" class="parkir-menu-link"><span>🕒</span>Log Aktivitas</a>

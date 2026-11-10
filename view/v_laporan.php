@@ -192,6 +192,15 @@ $link_dashboard = (($_SESSION['role'] ?? '') === 'owner')
 
                 </tbody>
 
+                <?php if (!empty($data_laporan)): ?>
+                <tfoot>
+                    <tr>
+                        <td colspan="8" class="label-total">Total Pendapatan</td>
+                        <td>Rp<?= number_format($total_pendapatan, 0, ',', '.') ?></td>
+                    </tr>
+                </tfoot>
+                <?php endif; ?>
+
             </table>
 
         </div>
